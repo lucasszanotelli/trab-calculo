@@ -47,6 +47,9 @@ def menu():
 
 ################ PROGRAMA PRINCIPAL ####################
 d = distancia()
+
+pontos = 0
+
 op = 1
 while op != 0:
         op = menu()
@@ -55,9 +58,24 @@ while op != 0:
             print("\n\nFim do programa!!!\n\n")
             
         elif op == 1:
-            print("\n\nDISTÂNCIA\n\n")
+            print("\n\nDISTÂNCIA\n\n")    
+            possibilidade = int(input("Informe a possível distância: "))
+            if possibilidade>d:
+                calculo = possibilidade - d
+            elif d>possibilidade:
+                calculo = d -possibilidade
+            else:
+                print("Parabéns! Você acertou!")
+                pontos = 10
 
-            
+            if calculo > 0 and calculo < 1:
+                pontos += 5
+            elif calculo >2:
+                pontos += 2
+            else:
+                pontos += 1
+
+         
         elif op == 2:
             print("\n\nALTURA MÁXIMA\n\n")
  
