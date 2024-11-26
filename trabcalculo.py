@@ -75,6 +75,8 @@ while op != 0:
             else:
                 pontos += 1
 
+            print(10 - (possibilidade-d)*0.01)
+
          
         elif op == 2:
             print("\n\nALTURA MÁXIMA\n\n")
